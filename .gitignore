@@ -1,0 +1,7 @@
+
+*.suo
+/_ReSharper.source
+*.sln
+bin
+obj
+TestResults
