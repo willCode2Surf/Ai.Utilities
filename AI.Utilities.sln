@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI.Defensive.Guard.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI.Serialization", "src\AI.Serialization\AI.Serialization.csproj", "{6DE9BD54-29A4-4524-A0F3-DA6FAB08A8C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI.MVCExtensions", "..\src\AI.MVCExtensions\AI.MVCExtensions.csproj", "{99450019-AA95-43D3-8724-FDAF5DBCA623}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI.Mail", "src\AI.Mail\AI.Mail.csproj", "{B8DE913F-BB30-4856-ACD9-9C878E1DB0CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogger", "src\EventLogger\EventLogger.csproj", "{1049CC3A-EE86-4FE6-90CE-E018B32488AC}"
@@ -31,10 +29,6 @@ Global
 		{6DE9BD54-29A4-4524-A0F3-DA6FAB08A8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE9BD54-29A4-4524-A0F3-DA6FAB08A8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DE9BD54-29A4-4524-A0F3-DA6FAB08A8C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99450019-AA95-43D3-8724-FDAF5DBCA623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99450019-AA95-43D3-8724-FDAF5DBCA623}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99450019-AA95-43D3-8724-FDAF5DBCA623}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99450019-AA95-43D3-8724-FDAF5DBCA623}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8DE913F-BB30-4856-ACD9-9C878E1DB0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8DE913F-BB30-4856-ACD9-9C878E1DB0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8DE913F-BB30-4856-ACD9-9C878E1DB0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
