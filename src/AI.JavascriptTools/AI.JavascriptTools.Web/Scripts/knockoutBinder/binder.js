@@ -24,6 +24,16 @@
         
         return destination;
     };
+
+    self.extend = function (viewModelName, viewModel) {
+        
+        var extendedViewModel = viewModels[viewModelName]();
+        for (var prop in viewModel) {
+            extendedViewModel[prop] = viewModel[prop];
+        }
+        extendedViewModel.init();
+        return extendedViewModel;
+    };
     
     $(function () {
         $('.bindable').each(function(index, data) {
@@ -33,17 +43,27 @@
             {
                 url += utilities.data.getDataAttribute(domElement, 'url');
             }
-            
-            if (url !== "") {
-                self.getData(url, function (viewModel) {
-                    if ($(domElement).hasClass('observable')) {
-                        var observableViewModel = {};
-                        self.convertToObservable(viewModel, observableViewModel);
-                        ko.applyBindings(observableViewModel, $(domElement)[0]);
-                    }
-                    ko.applyBindings(viewModel, $(domElement)[0]);
-                });
+
+            if (url === "") {
+                return;
             }
+
+            self.getData(url, function (viewModel) {
+                if ($(domElement).hasClass('observable')) {
+                    var observableViewModel = {};
+                    self.convertToObservable(viewModel, observableViewModel);
+                    viewModel = observableViewModel;
+                }
+                
+                if ($(domElement).hasClass('extend')) {
+                    var viewModelName = utilities.data.getDataAttribute(domElement, 'model');
+                    var extendedViewModel = self.extend(viewModelName, viewModel);
+                    debugger;
+                    viewModel = extendedViewModel;
+                }
+                ko.applyBindings(viewModel, $(domElement)[0]);
+            });
+
         });
     });
 }();

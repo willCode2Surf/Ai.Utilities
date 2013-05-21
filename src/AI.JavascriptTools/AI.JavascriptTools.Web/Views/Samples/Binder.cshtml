@@ -63,3 +63,39 @@
         <span data-bind="text:Phone"></span>
     </div>
 </div>
+
+
+<h2>Observable with Model Extensions</h2>
+<div class="bindable observable extend" data-url="/api/binder" data-model="sample">
+        <div>
+        <input data-bind="value:Name().FirstName" />
+        <span data-bind="text:Name().FirstName"></span>
+    </div>
+    <div>
+        <input data-bind="value:Name().LastName" />
+        <span data-bind="text:Name().LastName"></span>
+    </div>
+    <div>
+        <span data-bind="text:FullName"></span>
+    </div>
+    <div>
+        <input data-bind="value:Address().Street" />
+        <span data-bind="text:Address().Street"></span>
+    </div>
+    <div>
+        <input data-bind="value:Address().City" />
+        <span data-bind="text:Address().City"></span>
+    </div>
+    <div>
+        <input data-bind="value:Address().State" />
+        <span data-bind="text:Address().State"></span>
+    </div>
+    <div>
+        <input data-bind="value:Address().Zipcode" />
+        <span data-bind="text:Address().Zipcode"></span>
+    </div>
+    <div>
+        <input data-bind="value:Phone" />
+        <span data-bind="text:Phone"></span>
+    </div>
+</div>

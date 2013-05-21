@@ -6,7 +6,6 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using AI.JavascriptTools.Web.App_Start;
 
 namespace AI.JavascriptTools.Web
 {
@@ -24,9 +23,7 @@ namespace AI.JavascriptTools.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            UtilitiesConfig.Register(BundleTable.Bundles);
-            HighchartsConfig.Register(BundleTable.Bundles);
-            KnockoutConfig.Register(BundleTable.Bundles);
+            AiScriptsConfig.Register(BundleTable.Bundles);
         }
     }
 }
