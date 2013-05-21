@@ -13,8 +13,12 @@
         @RenderBody()
       
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/scripts/ai")
+        @Scripts.Render("~/bundles/jquery",
+                        "~/bundles/scripts/knockout",
+                        "~/bundles/scripts/highcharts",
+                        "~/bundles/scripts/ai"
+             )
+        
         
         @RenderSection("scripts", required: false)
     </body>

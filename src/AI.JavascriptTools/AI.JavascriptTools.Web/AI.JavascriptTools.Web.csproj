@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AiScriptsConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <None Include="App_Start\AiScriptsConfig.cs.pp" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -207,8 +208,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
-    <Content Include="Scripts\graphs\barchart.js" />
-    <Content Include="Scripts\graphs\line.js" />
+    <Content Include="Scripts\graphs\graphs.barchart.js" />
+    <Content Include="Scripts\graphs\facade.js" />
+    <Content Include="Scripts\graphs\graphs.linechart.js" />
+    <Content Include="Scripts\graphs\namespace.js" />
     <Content Include="Scripts\graphs\options.js" />
     <Content Include="Scripts\highcharts\exporting.js" />
     <Content Include="Scripts\highcharts\highcharts.js" />
@@ -222,6 +225,8 @@
     <Content Include="Scripts\knockoutBinder\binder.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\utilities\utilities.data.js" />
+    <Content Include="Scripts\utilities\namespace.js" />
+    <Content Include="Scripts\utilities\utilities.string.js" />
     <Content Include="Scripts\ViewModels\sample.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

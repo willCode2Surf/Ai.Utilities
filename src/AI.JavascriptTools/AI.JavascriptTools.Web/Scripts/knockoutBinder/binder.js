@@ -1,4 +1,6 @@
-﻿binder = function() {
+﻿binder = function () {
+    var that = {};
+    
     self.getData = function(url, callback) {
         $.getJSON(url, function(data) {
             return callback(data);
@@ -34,13 +36,12 @@
         extendedViewModel.init();
         return extendedViewModel;
     };
-    
-    $(function () {
-        $('.bindable').each(function(index, data) {
+
+    that.bind = function(container) {
+        $(container).children('.bindable').each(function(index, data) {
             var url = "";
             var domElement = $(data);
-            if (utilities.data.hasDataAttribute(domElement, 'url'))
-            {
+            if (utilities.data.hasDataAttribute(domElement, 'url')) {
                 url += utilities.data.getDataAttribute(domElement, 'url');
             }
 
@@ -48,22 +49,26 @@
                 return;
             }
 
-            self.getData(url, function (viewModel) {
+            self.getData(url, function(viewModel) {
                 if ($(domElement).hasClass('observable')) {
                     var observableViewModel = {};
                     self.convertToObservable(viewModel, observableViewModel);
                     viewModel = observableViewModel;
                 }
-                
+
                 if ($(domElement).hasClass('extend')) {
                     var viewModelName = utilities.data.getDataAttribute(domElement, 'model');
                     var extendedViewModel = self.extend(viewModelName, viewModel);
-                    debugger;
                     viewModel = extendedViewModel;
                 }
                 ko.applyBindings(viewModel, $(domElement)[0]);
             });
-
         });
+    };
+
+    $(function () {
+        that.bind($('body'));
     });
+
+    return that;
 }();

@@ -23,7 +23,7 @@ namespace AI.JavascriptTools.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            AiScriptsConfig.Register(BundleTable.Bundles);
+            AiScriptsConfig.Register();
         }
     }
 }

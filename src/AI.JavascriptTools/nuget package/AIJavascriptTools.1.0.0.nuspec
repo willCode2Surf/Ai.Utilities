@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>AIJavascriptTools</id>
+        <version>1.0.0</version>
+        <title>AI Javascript Tools</title>
+        <authors>Paul Kavanaugh</authors>
+        <owners />
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Javascript Library to assist in knockout js bindings, data utilities, and highcharts</description>
+        <summary>Javascript Library to assist in knockout js bindings, data utilities, and highcharts</summary>
+        <tags>JS, Highcharts, Knockout JS</tags>
+        <dependencies>
+            <dependency id="knockoutjs" version="2.2.1" />
+            <dependency id="HighCharts" version="1.0.0" />
+            <dependency id="jQuery" version="2.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\Ai.Utilities\src\AI.JavascriptTools\AI.JavascriptTools.Web\App_Start\AiScriptsConfig.cs" target="content\App_Start\AiScriptsConfig.cs.pp" />
+        <file src="..\Ai.Utilities\src\AI.JavascriptTools\AI.JavascriptTools.Web\Scripts\graphs\barchart.js" target="content\Scripts\Graphs\barchart.js" />
+        <file src="..\Ai.Utilities\src\AI.JavascriptTools\AI.JavascriptTools.Web\Scripts\graphs\line.js" target="content\Scripts\Graphs\line.js" />
+        <file src="..\Ai.Utilities\src\AI.JavascriptTools\AI.JavascriptTools.Web\Scripts\graphs\options.js" target="content\Scripts\Graphs\options.js" />
+        <file src="..\Ai.Utilities\src\AI.JavascriptTools\AI.JavascriptTools.Web\Scripts\knockoutBinder\binder.js" target="content\Scripts\KnockoutBinder\binder.js" />
+        <file src="..\Ai.Utilities\src\AI.JavascriptTools\AI.JavascriptTools.Web\Scripts\utilities\utilities.data.js" target="content\Scripts\Utilities\utilities.data.js" />
+        <file src="content\Scripts\ViewModels\_._" target="content\Scripts\ViewModels\_._" />
+    </files>
+</package>

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
-  
-namespace AI.JavascriptTools.Web
+
+
+namespace $rootnamespace$
 {
     public class AiScriptsConfig
     {
-        public static void Register()
+
+        public static void Register(BundleCollection bundles)
         {
-            var bundleOrder = new BundleFileSetOrdering("AIBundleOrder");
+             var bundleOrder = new BundleFileSetOrdering("AIBundleOrder");
 
             BundleTable.Bundles.Add(new ScriptBundle("~/bundles/scripts/ai").Include(
                 "~/scripts/knockoutBinder/binder.js",

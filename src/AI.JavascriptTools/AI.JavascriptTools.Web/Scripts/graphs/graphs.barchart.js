@@ -1,9 +1,9 @@
-﻿$(function() {
-    $('.barchart').each(function(index, data) {
+﻿graphs.barchart = function(container) {
+    $(container).children('.barchart').each(function (index, data) {
         var domElement = $(data);
         var url = "";
         var title = "";
-        
+
         if (utilities.data.hasDataAttribute(domElement, 'title')) {
             title += utilities.data.getDataAttribute(domElement, 'title');
         }
@@ -11,7 +11,7 @@
         if (utilities.data.hasDataAttribute(domElement, 'url')) {
             url += utilities.data.getDataAttribute(domElement, 'url');
         }
-        
+
         if (url != "") {
             $.getJSON(url, function (chartData) {
                 $(domElement).highcharts({
@@ -37,4 +37,4 @@
             });
         }
     });
-})
+};

@@ -1,5 +1,4 @@
-﻿utilities = {};
-utilities.data = function () {
+﻿utilities.data = function () {
     var self = this;
     var that = {};
 
